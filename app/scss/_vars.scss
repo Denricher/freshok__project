@@ -1,0 +1,79 @@
+$green-900: #63a60f;
+$green-200: #e0edcf;
+$green-100: #eff6e7;
+// Основной цвет
+$dark-900: #121212;
+$dark-800: #31352b;
+$dark-500: #505050;
+$red-900: #cf3e3b;
+$orange-900: #ff7a00;
+$yellow-900: #ffb800;
+$silver-600: #c1c1c1;
+$silver-100: #f6f6f6;
+// Цвет фона
+$white: #ffffff;
+
+%lato-300 {
+	font-family: 'Lato-Light', sans-serif;
+	font-weight: 300;
+}
+
+%lato-400 {
+	font-family: 'Lato-Regular', sans-serif;
+	font-weight: 400;
+}
+
+// Основной шрифт
+%lato-600 {
+	font-family: 'Lato-SemiBold', sans-serif;
+	font-weight: 600;
+}
+
+%lato-700 {
+	font-family: 'Lato-Bold', sans-serif;
+	font-weight: 700;
+}
+
+%signika-300 {
+	font-family: 'Signika-Light', sans-serif;
+	font-weight: 300;
+}
+
+%signika-400 {
+	font-family: 'Signika-Regular', sans-serif;
+	font-weight: 400;
+}
+
+%signika-600 {
+	font-family: 'Signika-SemiBold', sans-serif;
+	font-weight: 600;
+}
+
+%signika-700 {
+	font-family: 'Signika-Bold', sans-serif;
+	font-weight: 700;
+}
+
+%btn {
+	font-family: 'Lato-SemiBold', sans-serif;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 1.4;
+	letter-spacing: 0.03em;
+	color: $white;
+	background-color: $green-900;
+	border: 1px solid transparent;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+%product__note {
+	font-family: 'Lato-Bold', sans-serif;
+	font-weight: 700;
+	font-size: 10px;
+	line-height: 1;
+	color: $white;
+	text-transform: uppercase;
+	border-radius: 6px;
+	padding: 3px 6px;
+}
