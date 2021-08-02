@@ -22,7 +22,6 @@
 	}
 
 	&__form {
-		// font-size: 0;
 		max-width: 580px;
 		width: 100%;
 		margin-right: 25px;
@@ -38,7 +37,8 @@
 		border: none;
 		border-top-left-radius: 6px;
 		border-bottom-left-radius: 6px;
-		padding: 15px 15px 15px 50px;
+		padding: 16px 15px 16px 50px;
+		margin-right: -4px;
 
 		&::placeholder {
 			color: $dark-800;
@@ -166,6 +166,7 @@
 		color: $green-900;
 		background-color: $white;
 		padding: 15px 45px 15px 60px;
+		margin-right: 10px;
 		transition: background-color 0.3s;
 
 		&::before {
@@ -572,6 +573,7 @@
 		display: block;
 		width: fit-content;
 		margin: 0 auto;
+		margin-bottom: 70px;
 		transition: background-color 0.3s, box-shadow 0.3s;
 
 		&:hover {
@@ -590,7 +592,84 @@
 	}
 }
 
+.promo {
+	&__items {
+		display: flex;
+		justify-content: space-between;
+	}
 
+	&__item {
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		max-width: 300px;
+		width: 100%;
+		border-radius: 6px;
+		padding: 75px 30px;
+		transition: box-shadow 0.3s;
+
+		&:nth-child(1) {
+			max-width: 630px;
+		}
+
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+
+		&:hover {
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		}
+
+		&:hover .promo__title {
+			color: $white;
+			text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
+
+		}
+
+		&:hover .promo__subtitle {
+			color: $white;
+			text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
+		}
+
+		&:hover .promo__link {
+			color: $white;
+			text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
+			border-color: $white;
+		}
+	}
+
+	&__title {
+		@extend %signika-600;
+		font-size: 30px;
+		letter-spacing: normal;
+		color: $dark-500;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+		transition: color 0.3s, text-shadow 0.3s;
+	}
+
+	&__subtitle {
+		display: block;
+		@extend %lato-700;
+		font-size: 12px;
+		line-height: 1;
+		letter-spacing: 0.1em;
+		margin-bottom: 20px;
+		transition: color 0.2s, text-shadow 0.2s;
+	}
+
+	&__link {
+		@extend %lato-700;
+		font-size: 14px;
+		line-height: 1;
+		letter-spacing: normal;
+		color: $dark-500;
+		text-transform: uppercase;
+		padding-bottom: 5px;
+		border-bottom: 2px solid $dark-500;
+		transition: color 0.4s, text-shadow 0.4s, border-color 0.4s;
+	}
+}
 
 
 
@@ -617,8 +696,6 @@
 	&__form {
 		max-width: 300px;
 		width: 100%;
-		// font-size: 0;
-		//если применить 0, то кнопка приклеивается
 	}
 
 	&__text {
@@ -637,6 +714,7 @@
 		border-bottom-left-radius: 6px;
 		border: none;
 		padding: 12px;
+		margin-right: -4px;
 
 		&::placeholder {
 			color: $dark-800;
