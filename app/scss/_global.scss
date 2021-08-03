@@ -45,8 +45,19 @@ body {
 	text-align: center;
 }
 
-.price {
-	@extend %lato-400;
-	line-height: 1;
-	color: $silver-600;
+.filter-line {
+	display: flex;
+	justify-content: center;
+	@extend %lato-700;
+	font-size: 15px;
+	color: $dark-500;
+	text-transform: uppercase;
+	margin-bottom: 50px;
+}
+
+.filter-item {
+	width: fit-content;
+	border-bottom: 3px solid transparent;
+	cursor: pointer;
+	transition: border-color 0.3s ease-in;
 }

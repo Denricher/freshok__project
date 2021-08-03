@@ -9,5 +9,6 @@ $(function () {
 	});
 
 	var mixer = mixitup('.product__items');
-
+	var mixer = mixitup('.promo__items');
+	//что-то не работает
 });
