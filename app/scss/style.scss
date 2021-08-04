@@ -5,100 +5,25 @@
 @import 'libs';
 
 .header {
+	background-color: $dark-800;
 
-	&__top {
-		background-color: $dark-800;
-	}
-
-	&__navbar {
-		background-color: $green-900;
-	}
-
-	&__inner {
+	&__nav {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		height: 110px;
+		padding: 14px 0;
 	}
 
-	&__form {
-		max-width: 580px;
-		width: 100%;
-		margin-right: 25px;
-	}
-
-	&__search {
-		position: relative;
-		width: 420px;
-		@extend %lato-400;
-		font-size: 14px;
-		line-height: 1.4;
-		letter-spacing: 0.03em;
-		border: none;
-		border-top-left-radius: 6px;
-		border-bottom-left-radius: 6px;
-		padding: 16px 15px 16px 50px;
-		margin-right: -4px;
-
-		&::placeholder {
-			color: $dark-800;
-		}
-
-		&::before {
-			content: "";
-			position: absolute;
-			background-image: url('../images/icons/search.svg');
-			// нет рисунка!!!
-			background-repeat: no-repeat;
-			background-size: contain;
-			background-position: center;
-			width: 20px;
-			height: 20px;
-			left: 0;
-			top: 0;
-		}
-	}
-
-	&__btn {
-		@extend %btn;
-		text-transform: uppercase;
-		background-color: $dark-800;
-		border-top-left-radius: 0;
-		border-bottom-left-radius: 0;
-		padding: 15px 50px;
-		transition: background-color 0.3s, box-shadow 0.3s;
-
-		&:hover {
-			background-color: rgba(49, 53, 43, 0.85);
-		}
-
-		&:active {
-			box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-		}
-
-		&:focus {
-			// box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 0.5);
-			// сбивается active
-		}
-	}
-}
-
-.nav {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	height: 50px;
-
-	&__services {
+	&__list {
 		display: flex;
 	}
 
-	&__service {
+	&__item {
 		position: relative;
 		cursor: pointer;
 
-		&:first-child {
-			margin-right: 45px;
+		&:not(:last-child) {
+			margin-right: 25px;
 		}
 
 		&:hover {
@@ -118,56 +43,57 @@
 		}
 	}
 
-	&__service--address {
+	& &__item--address {
 		padding-left: 45px;
+		margin-right: 45px;
+
+		&::before {
+			background-image: url('../images/icons/address.svg');
+		}
 	}
 
-	&__service--address::before {
-		background-image: url('../images/icons/address.svg');
-	}
-
-	&__service--tel {
+	&__item--tel {
 		padding-left: 35px;
-	}
 
-	&__service--tel::before {
-		background-image: url('../images/icons/tel.svg');
+		&::before {
+			background-image: url('../images/icons/tel.svg');
+		}
 	}
 
 	&__link {
 		@extend %lato-700;
 		font-size: 13px;
-		line-height: 1.3;
+		line-height: 1.7;
 		color: $white;
 		text-transform: uppercase;
+		outline-color: $green-900;
 	}
 
-	&__list {
-		display: flex;
-
-	}
-
-	&__item {
-		&:hover {
-			opacity: 0.7;
-		}
-
-	}
-
-	&__item:not(:last-child) {
-		margin-right: 25px;
+	&__menu {
+		background-color: $green-900;
 	}
 }
 
 .menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 25px 0;
+
+	&__logo {
+		outline-color: $green-200;
+	}
+
 	&__btn {
 		position: relative;
-		@extend %btn;
+		@extend %lato-600;
+		font-size: 14px;
 		color: $green-900;
 		background-color: $white;
 		padding: 15px 45px 15px 60px;
 		margin-right: 10px;
-		transition: background-color 0.3s;
+		outline-color: $green-900;
+		transition: background-color 0.3s ease-in;
 
 		&::before {
 			content: "";
@@ -199,25 +125,117 @@
 			background-color: $green-200;
 		}
 	}
-}
-
-.user {
 
 	&__list {
+		display: none;
+	}
+
+	&__form {
+		max-width: 580px;
+		width: 100%;
+	}
+
+	&__search {
+		position: relative;
+		max-width: 420px;
+		width: 100%;
+		@extend %lato-400;
+		font-size: 14px;
+		line-height: 1.4;
+		letter-spacing: 0.03em;
+		border: none;
+		border-top-left-radius: 6px;
+		border-bottom-left-radius: 6px;
+		padding: 16px 15px 16px 50px;
+		margin-right: -4px;
+		outline-color: $green-900;
+
+		&::placeholder {
+			color: $dark-800;
+
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			background-image: url('../images/icons/search.svg');
+			// нет рисунка!!!
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
+			width: 20px;
+			height: 20px;
+			left: 0;
+			top: 0;
+		}
+	}
+
+	&__form-btn {
+		@extend %lato-600;
+		font-size: 14px;
+		text-transform: uppercase;
+		background-color: $dark-800;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+		padding: 15px 50px;
+		outline-color: $green-200;
+		transition: background-color 0.3s ease-in, box-shadow 0.3s ease-in;
+
+		&:hover {
+			background-color: rgba(49, 53, 43, 0.85);
+		}
+
+		&:active {
+			box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+		}
+
+		&:focus {
+			// box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 0.5);
+			// сбивается active
+		}
+	}
+
+	&__user-list {
 		display: flex;
 		align-items: center;
 		margin-right: 20px;
 	}
 
-	&__item {
+	&__user-item {
 		position: relative;
+		width: 50px;
+		height: 50px;
+		background-color: transparent;
+		border-radius: 3px;
+		border: none;
+
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+
+		&:hover {
+			background-color: rgba(255, 255, 255, 0.1);
+		}
 	}
 
-	&__item:not(:last-child) {
-		margin-right: 30px;
+	&__user-link {
+		position: absolute;
+		left: 12px;
+		top: 10px;
+		outline-color: $green-200;
 	}
 
-	&__count {
+	&__user-btn {
+		position: absolute;
+		background-color: transparent;
+		border: none;
+		left: 12px;
+		top: 10px;
+		cursor: pointer;
+		outline-color: $green-200;
+	}
+
+	&__user-count {
 		content: "";
 		position: absolute;
 		border-radius: 50%;
@@ -226,80 +244,124 @@
 		width: 18px;
 		height: 18px;
 		font-size: 10px;
-		line-height: 18px;
+		line-height: 1;
 		color: $red-900;
 		text-align: center;
+		padding: 4px 0;
 		left: -7px;
 		top: -8px;
 	}
 }
 
-.slider {
+.carousel {
 
-	&__item {
-		position: relative;
+	margin-bottom: 70px;
+
+	&__element {
 		height: calc(100vh - 310px);
+		position: relative;
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
+		outline-color: $green-200;
 	}
 
 	&__box {
 		position: absolute;
-		top: 25%;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	& .slick-prev,
+	& .slick-next {
+		position: absolute;
+		width: 60px;
+		height: 60px;
+		background-color: rgba(255, 255, 255, 0.8);
+		border-radius: 6px;
+		border: none;
+		top: 50%;
+		transform: translateY(-100%);
+		padding: 0;
+		cursor: pointer;
+		outline-color: $green-900;
+		z-index: 1;
+	}
+
+	& .slick-prev {
+		left: 60px;
+	}
+
+	& .slick-next {
+		right: 60px;
+	}
+
+	& .slick-prev img,
+	& .slick-next img {
+		margin: 0 auto;
 	}
 
 	&__text {
 		position: relative;
 		max-width: 870px;
-		width: fit-content;
+		width: 100%;
 		@extend %lato-400;
 		font-size: 16px;
 		line-height: 1.4;
 		letter-spacing: normal;
 		color: $dark-500;
 		padding: 25px;
-		margin-bottom: 30px;
+		margin-bottom: 40px;
 		z-index: 0;
+
+		&::before {
+			content: "";
+			position: absolute;
+			background-color: rgba(255, 255, 255, 0.8);
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			border-radius: 6px;
+			z-index: -1;
+		}
 	}
 
-	&__text:before {
-		content: "";
-		position: absolute;
-		background-color: rgba(255, 255, 255, 0.8);
-		left: 0;
-		right: 0;
-		top: 0;
-		bottom: 0;
-		border-radius: 6px;
-		z-index: -1;
+	&__text,
+	&__title,
+	&__subtitle,
+	&__item-title,
+	&__item-subtitle {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 
 	&__title {
 		@extend %signika-700;
 		font-size: 60px;
 		line-height: 1.3;
-		letter-spacing: -0.03em;
+		letter-spacing: -0.02em;
+		color: $red-900;
 		text-transform: uppercase;
-		color: $dark-500;
-		margin-bottom: 15px;
+		margin-bottom: 8px;
 	}
 
 	&__subtitle {
 		display: block;
-		color: $red-900;
+		letter-spacing: -0.03em;
+		color: $dark-500;
 	}
 
 	&__btn {
-		@extend %btn;
 		@extend %lato-400;
-		// не меняется шрифт
 		font-size: 18px;
 		line-height: 1.3;
 		padding: 12px 24px;
+		outline-color: $green-200;
 
 		&:hover {
-			background-color: #4D800C;
+			background-color: $green-600;
 		}
 
 		&:active {
@@ -312,46 +374,15 @@
 			// сбивается active
 		}
 	}
-}
 
-.slick-prev,
-.slick-next {
-	position: absolute;
-	width: 60px;
-	height: 60px;
-	background-color: rgba(255, 255, 255, 0.8);
-	border-radius: 6px;
-	border: none;
-	top: 50%;
-	transform: translateY(-150%);
-	padding: 0;
-	cursor: pointer;
-	z-index: 1;
-}
-
-.slick-prev {
-	left: 60px;
-}
-
-.slick-next {
-	right: 60px;
-}
-
-.slick-prev img,
-.slick-next img {
-	margin: 0 auto;
-}
-
-.service {
-	background-color: $silver-100;
-	padding: 50px 0;
-
-	&__items {
+	&__services {
 		display: flex;
 		justify-content: center;
+		background-color: $silver-100;
+		padding: 50px 0;
 	}
 
-	&__item {
+	&__service {
 		position: relative;
 		max-width: 275px;
 		width: 100%;
@@ -359,9 +390,13 @@
 		letter-spacing: normal;
 		color: $dark-500;
 		padding-left: 75px;
+
+		&:not(:last-child) {
+			margin-right: 50px;
+		}
 	}
 
-	&__item::before {
+	&__service::before {
 		content: "";
 		position: absolute;
 		background-repeat: no-repeat;
@@ -373,33 +408,30 @@
 		top: 0;
 	}
 
-	&__item--delivery::before {
+	&__service--delivery::before {
 		background-image: url('../images/icons/delivery.svg');
 	}
 
-	&__item--refund::before {
+	&__service--refund::before {
 		background-image: url('../images/icons/refund.svg');
 	}
 
-	&__item--support::before {
+	&__service--support::before {
 		background-image: url('../images/icons/support.svg');
 	}
 
-	&__item:not(:last-child) {
-		margin-right: 50px;
-	}
-
-	&__title {
+	&__service-title {
+		display: block;
 		@extend %lato-700;
 		font-size: 16px;
 		letter-spacing: normal;
 		color: $dark-900;
-		margin-bottom: 10px;
+		margin-bottom: 8px;
 	}
 }
 
 .product {
-	padding: 70px 0;
+	margin-bottom: 70px;
 
 	&__filter:not(:last-child) {
 		margin-right: 25px;
@@ -412,22 +444,25 @@
 
 	&__items {
 		display: flex;
-		justify-content: space-around;
+		justify-content: center;
 		flex-wrap: wrap;
 		margin-right: -30px;
 		margin-bottom: 20px;
 	}
 
 	&__item {
+		margin-right: 30px;
+		margin-bottom: 30px;
+	}
+
+	&__card {
 		position: relative;
 		max-width: 300px;
 		width: 100%;
 		border: 1px solid rgba(17, 17, 17, 0.2);
 		border-radius: 6px;
-		padding: 20px;
-		margin-right: 30px;
-		margin-bottom: 30px;
-		transition: border-color 0.3s;
+		padding-top: 57px;
+		transition: border-color 0.3s ease-in;
 
 		&:hover {
 			border-color: $green-900;
@@ -438,45 +473,117 @@
 		position: absolute;
 		width: 32px;
 		height: 29px;
-		right: 10px;
-		top: 10px;
+		right: 11px;
+		top: 15px;
 		background-color: transparent;
 		border: none;
 		padding: 0;
+		cursor: pointer;
+		outline-color: $green-900;
+		transition: fill 0.3s ease-in;
+
+		& path {
+			fill: $silver-600;
+		}
+
+		&:hover path {
+			fill: $yellow-900;
+		}
+	}
+
+	&__link {
+		outline-color: $green-900;
+	}
+
+	&__note-box {
+		position: absolute;
+		left: 11px;
+		top: 11px;
+	}
+
+	&__note-new,
+	&__note-sale,
+	&__note-hit {
+		display: block;
+		@extend %lato-700;
+		font-size: 10px;
+		line-height: 1;
+		color: $white;
+		text-transform: uppercase;
+		width: fit-content;
+		border-radius: 6px;
+		padding: 3px 6px;
+	}
+
+	&__note-new {
+		background-color: $green-900;
+		margin-bottom: 5px;
+	}
+
+	&__note-sale {
+		background-color: $red-900;
+	}
+
+	&__note-hit {
+		background-color: $orange-900;
+	}
+
+	&__img {
+		margin-bottom: 18px;
+	}
+
+	&__title {
+		@extend %lato-600;
+		font-size: 14px;
+		line-height: 1.4;
+		letter-spacing: 0.03em;
+		color: $dark-900;
+		padding: 0 18px 80px 18px;
+		// не подходит
+	}
+
+	&__price-old {
+		position: absolute;
+		@extend %lato-400;
+		line-height: 1;
+		color: $silver-600;
+		left: 19px;
+		bottom: 35px;
 
 		&::before {
 			content: "";
 			position: absolute;
-			background-image: url('../images/icons/favorite-card.svg');
-			background-repeat: no-repeat;
-			background-size: contain;
-			background-position: center;
-			width: 32px;
-			height: 29px;
-			left: 0;
-			top: 0;
-			transition: background-image 0.3s;
+			width: 100%;
+			border-bottom: 1px solid $silver-600;
+			transform: rotate(-14deg);
+			bottom: 7px;
 		}
+	}
 
-		&:hover::before {
-			background-image: url('../images/icons/favorite-card-hover.svg');
-		}
+	&__price {
+		position: absolute;
+		@extend %lato-400;
+		line-height: 1;
+		left: 19px;
+		bottom: 18px;
 	}
 
 	&__cart {
 		position: absolute;
 		width: 32px;
 		height: 32px;
-		right: 20px;
-		bottom: 20px;
+		right: 18px;
+		bottom: 18px;
 		background-color: $green-900;
 		border: none;
 		border-radius: 3px;
 		padding: 0;
 		cursor: pointer;
+		outline-color: $green-200;
+		transition: background-color 0.3s ease-in;
 
 		&:hover {
-			background-color: #4D800C;
+			background-color: $green-600;
 		}
 
 		&:active {
@@ -500,75 +607,11 @@
 			height: 16px;
 			left: 8px;
 			top: 8px;
-			transition: background-image 0.3s;
 		}
-	}
-
-	&__note-box {
-		position: absolute;
-		left: 10px;
-		top: 10px;
-	}
-
-	&__note-new,
-	&__note-sale,
-	&__note-hit {
-		@extend %product__note;
-	}
-
-	&__note-new {
-		background-color: $green-900;
-		margin-bottom: 5px;
-	}
-
-	&__note-sale {
-		background-color: $red-900;
-	}
-
-	&__note-hit {
-		background-color: $orange-900;
-	}
-
-	&__img {
-		padding-top: 60px;
-		margin-bottom: 20px;
-	}
-
-	&__title {
-		min-height: 60px;
-		margin-bottom: 40px;
-	}
-
-	&__price-old {
-		position: absolute;
-		@extend %lato-400;
-		line-height: 1;
-		color: $silver-600;
-		left: 20px;
-		bottom: 35px;
-
-		&::before {
-			content: "";
-			position: absolute;
-			width: 100%;
-			height: 50%;
-			border-bottom: 1px solid #C1C1C1;
-			transform: rotate(-15deg);
-		}
-	}
-
-	&__price {
-		position: absolute;
-		@extend %lato-400;
-		line-height: 1;
-		left: 20px;
-		bottom: 20px;
 	}
 
 	&__btn {
-		@extend %btn;
 		@extend %lato-400;
-		// не меняется шрифт
 		font-size: 18px;
 		line-height: 1.3;
 		color: $green-900;
@@ -576,10 +619,9 @@
 		border: 1px solid $green-900;
 		padding: 12px 24px;
 		display: block;
-		width: fit-content;
 		margin: 0 auto;
-		margin-bottom: 70px;
-		transition: background-color 0.3s, box-shadow 0.3s;
+		outline-color: $green-900;
+		transition: background-color 0.3s ease-in, box-shadow 0.3s ease-in;
 
 		&:hover {
 			background-color: $green-100;
@@ -598,6 +640,8 @@
 }
 
 .banner {
+	margin-bottom: 70px;
+
 	&__items {
 		display: flex;
 		justify-content: space-between;
@@ -611,7 +655,8 @@
 		width: 100%;
 		border-radius: 6px;
 		padding: 75px 30px;
-		transition: box-shadow 0.3s;
+		cursor: pointer;
+		transition: box-shadow 0.3s ease-in;
 
 		&:nth-child(1) {
 			max-width: 630px;
@@ -643,14 +688,21 @@
 		}
 	}
 
+	&__link {
+		outline-color: $green-900;
+	}
+
 	&__title {
+		max-width: 400px;
+		width: 100%;
 		@extend %signika-600;
 		font-size: 30px;
+		line-height: 1.4;
 		letter-spacing: normal;
 		color: $dark-500;
 		text-transform: uppercase;
 		margin-bottom: 10px;
-		transition: color 0.3s, text-shadow 0.3s;
+		transition: color 0.3s linear, text-shadow 0.3s linear;
 	}
 
 	&__subtitle {
@@ -660,7 +712,18 @@
 		line-height: 1;
 		letter-spacing: 0.1em;
 		margin-bottom: 20px;
-		transition: color 0.2s, text-shadow 0.2s;
+		transition: color 0.3s linear, text-shadow 0.3s linear;
+	}
+
+	&__subtitle,
+	&__title-text {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	&__title-text {
+		display: block;
 	}
 
 	&__link {
@@ -672,7 +735,7 @@
 		text-transform: uppercase;
 		padding-bottom: 5px;
 		border-bottom: 2px solid $dark-500;
-		transition: color 0.4s, text-shadow 0.4s, border-color 0.4s;
+		transition: color 0.3s ease-in, text-shadow 0.3s ease-in, border-color 0.3s ease-in;
 	}
 }
 
@@ -711,7 +774,7 @@
 		padding: 12px;
 		margin-right: 30px;
 		margin-bottom: 30px;
-		transition: border-color 0.3s;
+		transition: border-color 0.3s ease-in;
 
 		&:hover {
 			border-color: $green-900;
@@ -731,8 +794,15 @@
 
 	&__note-new,
 	&__note-hit {
-		@extend %product__note;
 		position: absolute;
+		@extend %lato-700;
+		font-size: 10px;
+		line-height: 1;
+		color: $white;
+		text-transform: uppercase;
+		width: fit-content;
+		border-radius: 6px;
+		padding: 3px 6px;
 		z-index: 1;
 	}
 
@@ -756,7 +826,6 @@
 	}
 
 	&__title {
-		min-height: 60px;
 		margin-bottom: 5px;
 	}
 
@@ -796,7 +865,7 @@
 		margin-right: 10px;
 	}
 
-	&__price-currency {
+	&__currency {
 		@extend %lato-600;
 		font-size: 14px;
 		margin-left: -6px;
@@ -814,9 +883,9 @@
 			content: "";
 			position: absolute;
 			width: 100%;
-			height: 50%;
-			border-bottom: 1px solid #C1C1C1;
-			transform: rotate(-15deg);
+			border-bottom: 1px solid $silver-600;
+			transform: rotate(-14deg);
+			bottom: 7px;
 		}
 	}
 
@@ -842,19 +911,17 @@
 	}
 
 	&__btn {
-		@extend %btn;
 		@extend %lato-400;
-		// не меняется шрифт
 		font-size: 18px;
 		line-height: 1.3;
 		padding: 12px 24px;
 		display: block;
 		width: fit-content;
 		margin: 0 auto;
-		transition: background-color 0.3s, box-shadow 0.3s;
+		transition: background-color 0.3s ease-in, box-shadow 0.3s ease-in;
 
 		&:hover {
-			background-color: #4D800C;
+			background-color: $green-600;
 		}
 
 		&:active {
@@ -867,12 +934,7 @@
 			// сбивается active
 		}
 	}
-
-
-
 }
-
-
 
 .footer {
 	@extend %lato-400;
@@ -880,17 +942,17 @@
 	color: $white;
 	background-color: $dark-800;
 
-	&__top {
-		padding: 30px 0;
-	}
-
 	&__logo {
-		margin-bottom: 30px;
+		display: inline-block;
+		padding-top: 30px;
+		margin-bottom: 26px;
+		outline-color: $green-900;
 	}
 
 	&__content {
 		display: flex;
 		justify-content: space-between;
+		margin-bottom: 30px;
 	}
 
 	&__form {
@@ -898,23 +960,22 @@
 		width: 100%;
 	}
 
-	&__text {
+	&__message {
 		line-height: 1;
-		letter-spacing: 0;
-		margin-bottom: 20px;
+		letter-spacing: normal;
 	}
 
 	&__email {
-		width: 180px;
+		max-width: 180px;
+		width: 100%;
 		@extend %lato-400;
-		font-size: 14px;
-		line-height: 1;
-		letter-spacing: normal;
 		border-top-left-radius: 6px;
 		border-bottom-left-radius: 6px;
 		border: none;
 		padding: 12px;
+		margin-top: 12px;
 		margin-right: -4px;
+		outline-color: $green-200;
 
 		&::placeholder {
 			color: $dark-800;
@@ -922,7 +983,6 @@
 	}
 
 	&__btn {
-		@extend %btn;
 		@extend %lato-700;
 		font-size: 12px;
 		line-height: 1.2;
@@ -930,11 +990,12 @@
 		text-transform: uppercase;
 		border-top-left-radius: 0;
 		border-bottom-left-radius: 0;
-		padding: 12px 10px 12px 14px;
-		transition: background-color 0.3s, box-shadow 0.3s;
+		padding: 14px 10px 11px 14px;
+		outline-color: $green-200;
+		transition: background-color 0.3s ease-in, box-shadow 0.3s ease-in;
 
 		&:hover {
-			background-color: #4D800C;
+			background-color: $green-600;
 		}
 
 		&:active {
@@ -961,7 +1022,48 @@
 		margin-bottom: 20px;
 	}
 
-	&__bottom {
+	&__link {
+		outline-color: $green-900;
+	}
+
+	&__address {
+		max-width: 205px;
+		width: 100%;
+		letter-spacing: normal;
+	}
+
+	&__hotline {
+		display: block;
+		margin-bottom: 20px;
+		outline-color: $green-900;
+	}
+
+	&__social {
+		display: flex;
+		margin-top: 20px;
+	}
+
+	&__object {
+		transition: opacity 0.3s ease-in;
+
+		&:not(:last-child) {
+			margin-right: 13px;
+		}
+
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+
+	&__icon {
+		outline-color: $green-900;
+	}
+
+	&__payment {
+		border-top: 1px solid rgba(255, 255, 255, 0.1);
+	}
+
+	&__inner {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -972,42 +1074,7 @@
 		display: flex;
 	}
 
-	&__img:first-child {
-		margin-right: 25px;
+	&__card-img:first-child {
+		margin-right: 23px;
 	}
 }
-
-
-.address {
-	max-width: 205px;
-	width: 100%;
-	letter-spacing: normal;
-
-	&__link {
-		display: block;
-		margin-bottom: 20px;
-	}
-}
-
-.social {
-	display: flex;
-	margin-top: 20px;
-
-	&__item {
-		&:hover {
-			opacity: 0.7;
-		}
-	}
-
-	&__item:not(:last-child) {
-		margin-right: 10px;
-	}
-}
-
-
-
-
-
-
-
-@import 'media';

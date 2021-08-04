@@ -4,14 +4,14 @@ body {
 }
 
 body {
+	display: flex;
+	flex-direction: column;
 	@extend %lato-600;
 	font-size: 14px;
 	line-height: 1.4;
 	letter-spacing: 0.03em;
 	color: $dark-900;
 	background-color: $white;
-	display: flex;
-	flex-direction: column;
 }
 
 .main {
@@ -41,8 +41,21 @@ body {
 	@extend %signika-600;
 	font-size: 32px;
 	text-transform: uppercase;
-	margin-bottom: 30px;
 	text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-bottom: 30px;
+}
+
+.btn {
+	line-height: 1.4;
+	letter-spacing: 0.03em;
+	color: $white;
+	background-color: $green-900;
+	border: 1px solid transparent;
+	border-radius: 6px;
+	cursor: pointer;
 }
 
 .filter-line {
