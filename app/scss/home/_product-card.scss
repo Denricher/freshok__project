@@ -15,7 +15,7 @@
 		justify-content: center;
 		flex-wrap: wrap;
 		margin-right: -30px;
-		margin-bottom: 20px;
+		margin-bottom: 17px;
 	}
 
 	&__item {
@@ -29,7 +29,6 @@
 		width: 100%;
 		border: 1px solid rgba(17, 17, 17, 0.2);
 		border-radius: 6px;
-		padding-top: 57px;
 		transition: border-color 0.3s ease-in;
 
 		&:hover {
@@ -40,9 +39,9 @@
 	&__favorite {
 		position: absolute;
 		width: 32px;
-		height: 29px;
-		right: 11px;
-		top: 15px;
+		height: 28px;
+		right: 12px;
+		top: 16px;
 		background-color: transparent;
 		border: none;
 		padding: 0;
@@ -63,10 +62,12 @@
 		outline-color: $green-900;
 	}
 
-	&__note-box {
-		position: absolute;
-		left: 11px;
-		top: 11px;
+	&__note {
+		min-height: 49px;
+		// для фиксации высоты на несколько строк
+		padding-top: 10px;
+		padding-left: 10px;
+		margin-bottom: 7px;
 	}
 
 	&__note-new,
@@ -100,24 +101,40 @@
 		margin-bottom: 18px;
 	}
 
+	&__buy {
+		padding: 0 18px 18px 16px;
+	}
+
 	&__title {
 		@extend %lato-600;
 		font-size: 14px;
 		line-height: 1.4;
 		letter-spacing: 0.03em;
 		color: $dark-900;
-		padding: 0 18px 80px 18px;
-		// не подходит
-		//ограничение текста более одной строки
+		margin-bottom: 12px;
+		max-width: 258px;
+		width: 100%;
+		min-height: 4em;
+		//ограничение текста более одной строки????
+	}
+
+	&__price {
+		min-height: 31px;
+		// для фиксации высоты на несколько строк
+	}
+
+	&__price-old,
+	&__price-actual {
+		@extend %lato-400;
+		line-height: 1;
+
 	}
 
 	&__price-old {
 		position: absolute;
-		@extend %lato-400;
-		line-height: 1;
 		color: $silver-600;
-		left: 19px;
-		bottom: 35px;
+		left: 20px;
+		bottom: 34px;
 
 		&::before {
 			content: "";
@@ -126,15 +143,14 @@
 			border-bottom: 1px solid $silver-600;
 			transform: rotate(-14deg);
 			bottom: 7px;
+			// почему нельзя???
 		}
 	}
 
-	&__price {
+	&__price-actual {
 		position: absolute;
-		@extend %lato-400;
-		line-height: 1;
-		left: 19px;
-		bottom: 18px;
+		left: 20px;
+		bottom: 17px;
 	}
 
 	&__cart {
