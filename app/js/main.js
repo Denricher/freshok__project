@@ -6,6 +6,13 @@ $(function () {
 		nextArrow: '<button type="button" class="slick-next"><img src="images/icons/arrow-right.svg" alt="arrow-right"></button>',
 	});
 
+	$('.brands__runner').slick({
+		arrows: false,
+		infinite: true,
+		slidesToShow: 5,
+		slidesToScroll: 1,
+	});
+
 	var containerEl1 = document.querySelector('[data-ref="container-1"]');
 	var containerEl2 = document.querySelector('[data-ref="container-2"]');
 

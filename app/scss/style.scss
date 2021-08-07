@@ -98,13 +98,17 @@
 		outline-color: $green-900;
 		transition: background-color 0.3s ease-in;
 
-		&::before {
+		&::before,
+		&::after {
 			content: "";
 			position: absolute;
-			background-image: url('../images/icons/nav.svg');
 			background-repeat: no-repeat;
 			background-size: contain;
 			background-position: center;
+		}
+
+		&::before {
+			background-image: url('../images/icons/nav.svg');
 			width: 25px;
 			height: 17px;
 			left: 16px;
@@ -112,12 +116,7 @@
 		}
 
 		&::after {
-			content: "";
-			position: absolute;
 			background-image: url('../images/icons/arrow-down.svg');
-			background-repeat: no-repeat;
-			background-size: contain;
-			background-position: center;
 			width: 8px;
 			height: 4px;
 			right: 17px;
@@ -192,11 +191,6 @@
 
 		&:active {
 			box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-		}
-
-		&:focus {
-			// box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 0.5);
-			// сбивается active
 		}
 	}
 
@@ -308,6 +302,16 @@
 		margin: 0 auto;
 	}
 
+	&__text,
+	&__title,
+	&__subtitle,
+	&__item-title,
+	&__item-subtitle {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
 	&__text {
 		position: relative;
 		max-width: 870px;
@@ -332,16 +336,6 @@
 			border-radius: 6px;
 			z-index: -1;
 		}
-	}
-
-	&__text,
-	&__title,
-	&__subtitle,
-	&__item-title,
-	&__item-subtitle {
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
 	}
 
 	&__title {
@@ -374,11 +368,6 @@
 		&:active {
 			background-color: $green-900;
 			box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-		}
-
-		&:focus {
-			// box-shadow: 0px 0px 0px 4px #E0EDCF;
-			// сбивается active
 		}
 	}
 
@@ -475,20 +464,28 @@
 
 		}
 
-		&:hover .banner__subtitle {
+		&:hover .banner__subtitle,
+		&:hover .banner__link {
 			color: $white;
 			text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
 		}
 
 		&:hover .banner__link {
-			color: $white;
-			text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
 			border-color: $white;
 		}
 	}
 
 	&__link {
+		@extend %lato-700;
+		font-size: 14px;
+		line-height: 1;
+		letter-spacing: normal;
+		color: $dark-500;
+		text-transform: uppercase;
+		padding-bottom: 5px;
+		border-bottom: 2px solid $dark-500;
 		outline-color: $green-900;
+		transition: color 0.3s ease-in, text-shadow 0.3s ease-in, border-color 0.3s ease-in;
 	}
 
 	&__title {
@@ -504,6 +501,13 @@
 		transition: color 0.3s linear, text-shadow 0.3s linear;
 	}
 
+	&__subtitle,
+	&__title-text {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
 	&__subtitle {
 		display: block;
 		@extend %lato-700;
@@ -514,27 +518,8 @@
 		transition: color 0.3s linear, text-shadow 0.3s linear;
 	}
 
-	&__subtitle,
-	&__title-text {
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
-	}
-
 	&__title-text {
 		display: block;
-	}
-
-	&__link {
-		@extend %lato-700;
-		font-size: 14px;
-		line-height: 1;
-		letter-spacing: normal;
-		color: $dark-500;
-		text-transform: uppercase;
-		padding-bottom: 5px;
-		border-bottom: 2px solid $dark-500;
-		transition: color 0.3s ease-in, text-shadow 0.3s ease-in, border-color 0.3s ease-in;
 	}
 }
 
@@ -542,14 +527,24 @@
 	padding-top: 70px;
 	margin-bottom: 70px;
 
-	&__items {
+	&__runner {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 	}
 
-	&__item:hover {
+	&__item {
 		opacity: 0.5;
+		outline-color: $green-900;
+	}
+
+	&__item:hover {
+		opacity: 1;
+	}
+
+	& .slick-slide {
+		text-align: -webkit-center;
+		// методом подбора )) - чтобы outline и сам слайдер симметрично были
 	}
 }
 
@@ -576,6 +571,7 @@
 		padding-bottom: 6px;
 		padding-top: 8px;
 		margin-right: 5px;
+		outline-color: $green-200;
 	}
 
 	&__items {
@@ -592,6 +588,10 @@
 		&:hover .news__text {
 			color: $green-900;
 		}
+	}
+
+	&__link {
+		outline-color: $green-900;
 	}
 
 	&__data {
@@ -700,11 +700,6 @@
 		&:active {
 			background-color: $green-900;
 			box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-		}
-
-		&:focus {
-			// box-shadow: 0px 0px 0px 4px #E0EDCF;
-			// сбивается active
 		}
 	}
 

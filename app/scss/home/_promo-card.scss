@@ -40,6 +40,10 @@
 		}
 	}
 
+	&__link {
+		outline-color: $green-900;
+	}
+
 	&__inner {
 		display: flex;
 		justify-content: space-between;
@@ -51,8 +55,8 @@
 		margin-right: 10px;
 	}
 
-	&__note-new,
-	&__note-hit {
+	&__new,
+	&__hit {
 		position: absolute;
 		@extend %lato-700;
 		font-size: 10px;
@@ -65,11 +69,11 @@
 		z-index: 1;
 	}
 
-	&__note-new {
+	&__new {
 		background-color: $green-900;
 	}
 
-	&__note-hit {
+	&__hit {
 		background-color: $orange-900;
 	}
 
@@ -92,6 +96,7 @@
 		color: $dark-900;
 		min-height: 4em;
 		// для фиксации высоты текстового блока на несколько строк
+		// Через flex путаница получается в голове и на экране - надо с нуля карточку делать
 		margin-bottom: 9px;
 
 		// ограничение текста более одной строки????
@@ -186,6 +191,7 @@
 		display: block;
 		width: fit-content;
 		margin: 0 auto;
+		outline-color: $green-200;
 		transition: background-color 0.3s ease-in, box-shadow 0.3s ease-in;
 
 		&:hover {
@@ -195,11 +201,6 @@
 		&:active {
 			background-color: $green-900;
 			box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-		}
-
-		&:focus {
-			// box-shadow: 0px 0px 0px 4px #E0EDCF;
-			// сбивается active
 		}
 	}
 }
