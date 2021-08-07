@@ -93,7 +93,7 @@
 		font-size: 14px;
 		color: $green-900;
 		background-color: $white;
-		padding: 15px 45px 15px 60px;
+		padding: 14px 45px 15px 60px;
 		margin-right: 10px;
 		outline-color: $green-900;
 		transition: background-color 0.3s ease-in;
@@ -108,7 +108,7 @@
 			width: 25px;
 			height: 17px;
 			left: 16px;
-			top: 18px;
+			top: 15px;
 		}
 
 		&::after {
@@ -120,7 +120,7 @@
 			background-position: center;
 			width: 8px;
 			height: 4px;
-			right: 19px;
+			right: 17px;
 			top: 23px;
 		}
 
@@ -134,12 +134,28 @@
 	}
 
 	&__form {
-		max-width: 580px;
+		max-width: 585px;
 		width: 100%;
 	}
 
-	&__search {
+	&__message {
 		position: relative;
+
+		&::before {
+			content: "";
+			position: absolute;
+			background-image: url('../images/icons/search.svg');
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
+			width: 20px;
+			height: 20px;
+			left: 12px;
+			top: 0;
+		}
+	}
+
+	&__search {
 		max-width: 420px;
 		width: 100%;
 		@extend %lato-400;
@@ -150,26 +166,12 @@
 		border-top-left-radius: 6px;
 		border-bottom-left-radius: 6px;
 		padding: 16px 15px 16px 50px;
-		margin-right: -4px;
+		margin-right: -5px;
 		outline-color: $green-900;
 
 		&::placeholder {
 			color: $dark-800;
 
-		}
-
-		&::before {
-			content: "";
-			position: absolute;
-			background-image: url('../images/icons/search.svg');
-			// нет рисунка!!!
-			background-repeat: no-repeat;
-			background-size: contain;
-			background-position: center;
-			width: 20px;
-			height: 20px;
-			left: 0;
-			top: 0;
 		}
 	}
 
@@ -201,7 +203,7 @@
 	&__user-list {
 		display: flex;
 		align-items: center;
-		margin-right: 20px;
+		margin-right: 22px;
 	}
 
 	&__user-item {
@@ -212,8 +214,13 @@
 		border-radius: 3px;
 		border: none;
 
+
 		&:not(:last-child) {
-			margin-right: 10px;
+			margin-right: 12px;
+		}
+
+		&:first-child {
+			margin-right: 4px;
 		}
 
 		&:hover {
@@ -233,7 +240,7 @@
 		background-color: transparent;
 		border: none;
 		left: 12px;
-		top: 10px;
+		top: 9px;
 		cursor: pointer;
 		outline-color: $green-200;
 	}
@@ -251,15 +258,12 @@
 		color: $red-900;
 		text-align: center;
 		padding: 4px 0;
-		left: -7px;
-		top: -8px;
+		left: 0;
+		top: -7px;
 	}
 }
 
 .carousel {
-
-	margin-bottom: 70px;
-
 	&__element {
 		height: calc(100vh - 310px);
 		position: relative;
@@ -434,6 +438,7 @@
 }
 
 .banner {
+	padding-top: 70px;
 	margin-bottom: 70px;
 
 	&__items {
@@ -530,6 +535,103 @@
 		padding-bottom: 5px;
 		border-bottom: 2px solid $dark-500;
 		transition: color 0.3s ease-in, text-shadow 0.3s ease-in, border-color 0.3s ease-in;
+	}
+}
+
+.brands {
+	padding-top: 70px;
+	margin-bottom: 70px;
+
+	&__items {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__item:hover {
+		opacity: 0.5;
+	}
+}
+
+.news {
+	margin-bottom: 70px;
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+
+	&__title {
+		letter-spacing: 0.06em;
+		margin-bottom: 30px;
+	}
+
+	&__title-link {
+		@extend %lato-700;
+		line-height: 1;
+		color: $green-900;
+		text-transform: uppercase;
+		border-bottom: 2px solid $green-900;
+		padding-bottom: 6px;
+		padding-top: 8px;
+		margin-right: 5px;
+	}
+
+	&__items {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__item {
+		max-width: 410px;
+		width: 100%;
+		box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+		border-radius: 6px;
+
+		&:hover .news__text {
+			color: $green-900;
+		}
+	}
+
+	&__data {
+		height: 240px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		margin-bottom: 18px;
+	}
+
+	&__month {
+		@extend %lato-700;
+		font-size: 10px;
+		line-height: 1.2;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		text-align: center;
+		width: 65px;
+		height: 76px;
+		background-color: $white;
+		border-radius: 0 0 4px 4px;
+		margin-left: 20px;
+		padding-top: 18px;
+	}
+
+	&__day {
+		display: block;
+		@extend %signika-600;
+		font-size: 30px;
+		line-height: 1;
+		letter-spacing: normal;
+		padding-top: 6px;
+	}
+
+	&__text {
+		@extend %lato-600;
+		font-size: 18px;
+		letter-spacing: normal;
+		padding: 0 18px 18px;
+		transition: color 0.3s ease-in;
 	}
 }
 

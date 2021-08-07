@@ -302,27 +302,28 @@
 					Топовые товары
 				</h2>
 
-				<ul class="product__filters filter-line">
-					<li class="product__filter filter-item product__filter--active" data-filter="all">
-						Все товары
-					</li>
-					<li class="product__filter filter-item" data-filter=".category-a">
-						Фрукты
-					</li>
-					<li class="product__filter filter-item" data-filter=".category-b">
-						Овощи
-					</li>
-					<li class="product__filter filter-item" data-filter=".category-c">
-						Напитки
-					</li>
-					<li class="product__filter filter-item" data-filter=".category-d">
-						Бакалея
-					</li>
-				</ul>
+				<div class="product__mixer" data-ref="container-1">
 
-				<ul class="product__items">
-					<li class="product__item mix category-a">
-						<article class="product__card">
+					<ul class="product__filters filter-line">
+						<li class="product__filter filter-item product__filter--active" data-filter="all">
+							Все товары
+						</li>
+						<li class="product__filter filter-item" data-filter=".category-a">
+							Фрукты
+						</li>
+						<li class="product__filter filter-item" data-filter=".category-b">
+							Овощи
+						</li>
+						<li class="product__filter filter-item" data-filter=".category-c">
+							Напитки
+						</li>
+						<li class="product__filter filter-item" data-filter=".category-d">
+							Бакалея
+						</li>
+					</ul>
+
+					<div class="product__items">
+						<article class="product__card mix category-a">
 							<button class="product__favorite" type="submit">
 								<svg class="product__favorite-img" width="32" height="29" viewBox="0 0 32 29" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -366,9 +367,7 @@
 								</span>
 							</button>
 						</article>
-					</li>
-					<li class="product__item mix category-a">
-						<article class="product__card">
+						<article class="product__card mix category-a">
 							<button class="product__favorite" type="submit">
 								<svg class="product__favorite-img" width="32" height="29" viewBox="0 0 32 29" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -402,9 +401,7 @@
 								</span>
 							</button>
 						</article>
-					</li>
-					<li class="product__item mix category-a">
-						<article class="product__card">
+						<article class="product__card mix category-a">
 							<button class="product__favorite" type="submit">
 								<svg class="product__favorite-img" width="32" height="29" viewBox="0 0 32 29" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -442,9 +439,7 @@
 								</span>
 							</button>
 						</article>
-					</li>
-					<li class="product__item mix category-b">
-						<article class="product__card">
+						<article class="product__card mix category-b">
 							<button class="product__favorite" type="submit">
 								<svg class="product__favorite-img" width="32" height="29" viewBox="0 0 32 29" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -482,9 +477,7 @@
 								</span>
 							</button>
 						</article>
-					</li>
-					<li class="product__item mix category-b">
-						<article class="product__card">
+						<article class="product__card mix category-b">
 							<button class="product__favorite" type="submit">
 								<svg class="product__favorite-img" width="32" height="29" viewBox="0 0 32 29" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -522,9 +515,7 @@
 								</span>
 							</button>
 						</article>
-					</li>
-					<li class="product__item mix category-c">
-						<article class="product__card">
+						<article class="product__card mix category-c">
 							<button class="product__favorite" type="submit">
 								<svg class="product__favorite-img" width="32" height="29" viewBox="0 0 32 29" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -566,9 +557,7 @@
 								</span>
 							</button>
 						</article>
-					</li>
-					<li class="product__item mix category-d">
-						<article class="product__card">
+						<article class="product__card mix category-d">
 							<button class="product__favorite" type="submit">
 								<svg class="product__favorite-img" width="32" height="29" viewBox="0 0 32 29" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -606,9 +595,7 @@
 								</span>
 							</button>
 						</article>
-					</li>
-					<li class="product__item mix category-d">
-						<article class="product__card">
+						<article class="product__card mix category-a">
 							<button class="product__favorite" type="submit">
 								<svg class="product__favorite-img" width="32" height="29" viewBox="0 0 32 29" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -643,8 +630,8 @@
 								</span>
 							</button>
 						</article>
-					</li>
-				</ul>
+					</div>
+				</div>
 
 				<button class="btn product__btn" type="button">
 					Показать еще
@@ -710,308 +697,400 @@
 			</div>
 		</div>
 
-		<!-- <section class="promo">
+		<section class="promo">
 			<div class="container">
 
-				<h3 class="title">
+				<h2 class="title">
 					Акции
-				</h3>
+				</h2>
 
-				<ul class="promo__filters filter-line">
-					<li class="promo__filter filter-item promo__filter--active" data-filter="all">
-						Все товары
-					</li>
-					<li class="promo__filter filter-item" data-filter=".category-a">
-						Новинки
-					</li>
-					<li class="promo__filter filter-item" data-filter=".category-b">
-						Хиты
-					</li>
-				</ul>
+				<div class="product__mixer" data-ref="container-2">
 
-				<ul class="promo__items">
+					<ul class="promo__filters filter-line">
+						<li class="promo__filter filter-item promo__filter--active" data-filter="all">
+							Все товары
+						</li>
+						<li class="promo__filter filter-item" data-filter=".category-a">
+							Новинки
+						</li>
+						<li class="promo__filter filter-item" data-filter=".category-b">
+							Хиты
+						</li>
+					</ul>
 
-					<li class="promo__item mix category-a">
-						<a class="promo__link" href="#">
-							<div class="promo__inner">
-								<div class="promo__inner-img">
-									<p class="promo__note-new">Новинка</p>
-									<img class="promo__img" src="images/promo/pineapple.png" width="100" height="100" alt="Ананас">
-								</div>
-								<div class="promo__inner-text">
-									<h3 class="promo__title">Ананас, 1 кг</h3>
-									<p class="promo__instock">В наличии</p>
-									<div class="promo__inner-price">
-										<div class="promo__box-price">
-											<span class="promo__price">
-												999
-												<span class="promo__currency">₽</span>
-											</span>
-											<span class="promo__price-old">1999
-												₽
-												<span class="promo__currency-old">₽</span>
+					<div class="promo__items">
+						<article class="promo__card mix category-a">
+							<a class="promo__link" href="#">
+								<div class="promo__inner">
+									<div class="promo__inner-img">
+										<p class="promo__note-new">Новинка</p>
+										<img class="promo__img" src="images/promo/pineapple.png" width="100" height="100" alt="Ананас">
+									</div>
+									<div class="promo__inner-text">
+										<h3 class="promo__title">Ананас, 1 кг</h3>
+										<p class="promo__instock">В наличии</p>
+										<div class="promo__inner-price">
+											<div class="promo__box-price">
+												<span class="promo__price-actual">
+													999
+													<span class="promo__currency-actual">₽</span>
+												</span>
+												<span class="promo__price-old">
+													1999
+													<span class="promo__currency-old">₽</span>
+												</span>
+											</div>
+											<span class="promo__rating">
+												4.5
+												<span class="sr-only">
+													Рейтинг
+												</span>
 											</span>
 										</div>
-										<span class="promo__rating">
-											4.5
-											<span class="sr-only">
-												Рейтинг
-											</span>
-										</span>
 									</div>
 								</div>
-							</div>
-						</a>
-					</li>
-
-					<li class="promo__item mix category-a">
-						<a class="promo__link" href="#">
-							<div class="promo__inner">
-								<div class="promo__inner-img">
-									<p class="promo__note-new">Новинка</p>
-									<img class="promo__img" src="images/promo/pineapple.png" width="100" height="100"
-										alt="Кофе с коноплей органический Caffé Salomoni">
-								</div>
-								<div class="promo__inner-text">
-									<h3 class="promo__title">Кофе с коноплей органический Caffé Salomoni 250г</h3>
-									<p class="promo__ends">Заканчивается</p>
-									<div class="promo__inner-price">
-										<div class="promo__box-price">
-											<span class="promo__price">
-												777
-												<span class="promo__currency">₽</span>
-											</span>
-											<span class="promo__price-old">
-												877
-												<span class="promo__currency-old">₽</span>
+							</a>
+						</article>
+						<article class="promo__card mix category-a">
+							<a class="promo__link" href="#">
+								<div class="promo__inner">
+									<div class="promo__inner-img">
+										<p class="promo__note-new">Новинка</p>
+										<img class="promo__img" src="images/promo/coffee.png" width="100" height="100"
+											alt="Кофе с коноплей органический Caffé Salomoni">
+									</div>
+									<div class="promo__inner-text">
+										<h3 class="promo__title">Кофе с коноплей органический Caffé Salomoni 250г</h3>
+										<p class="promo__ends">Заканчивается</p>
+										<div class="promo__inner-price">
+											<div class="promo__box-price">
+												<span class="promo__price-actual">
+													777
+													<span class="promo__currency-actual">₽</span>
+												</span>
+												<span class="promo__price-old">
+													877
+													<span class="promo__currency-old">₽</span>
+												</span>
+											</div>
+											<span class="promo__rating">
+												4.9
+												<span class="sr-only">
+													Рейтинг
+												</span>
 											</span>
 										</div>
-										<span class="promo__rating">
-											4.9
-											<span class="sr-only">
-												Рейтинг
-											</span>
-										</span>
 									</div>
 								</div>
-							</div>
-						</a>
-					</li>
-
-					<li class="promo__item mix category-a">
-						<a class="promo__link" href="#">
-							<div class="promo__inner">
-								<div class="promo__inner-img">
-									<p class="promo__note-new">Новинка</p>
-									<img class="promo__img" src="images/promo/pineapple.png" width="100" height="100"
-										alt="Клубника, 1 кг">
-								</div>
-								<div class="promo__inner-text">
-									<h3 class="promo__title">Клубника, 1 кг</h3>
-									<p class="promo__outofstock">Нет в наличии</p>
-									<div class="promo__inner-price">
-										<div class="promo__box-price">
-											<span class="promo__price">
-												440
-												<span class="promo__currency">₽</span>
-											</span>
-											<span class="promo__price-old">
-												600
-												<span class="promo__currency-old">₽</span>
+							</a>
+						</article>
+						<article class="promo__card mix category-a">
+							<a class="promo__link" href="#">
+								<div class="promo__inner">
+									<div class="promo__inner-img">
+										<p class="promo__note-new">Новинка</p>
+										<img class="promo__img" src="images/promo/strawberry.png" width="100" height="100"
+											alt="Клубника, 1 кг">
+									</div>
+									<div class="promo__inner-text">
+										<h3 class="promo__title">Клубника, 1 кг</h3>
+										<p class="promo__outofstock">Нет в наличии</p>
+										<div class="promo__inner-price">
+											<div class="promo__box-price">
+												<span class="promo__price-actual">
+													440
+													<span class="promo__currency-actual">₽</span>
+												</span>
+												<span class="promo__price-old">
+													600
+													<span class="promo__currency-old">₽</span>
+												</span>
+											</div>
+											<span class="promo__rating">
+												5.0
+												<span class="sr-only">
+													Рейтинг
+												</span>
 											</span>
 										</div>
-										<span class="promo__rating">
-											5.0
-											<span class="sr-only">
-												Рейтинг
-											</span>
-										</span>
 									</div>
 								</div>
-							</div>
-						</a>
-					</li>
-
-					<li class="promo__item mix category-a">
-						<a class="promo__link" href="#">
-							<div class="promo__inner">
-								<div class="promo__inner-img">
-									<p class="promo__note-new">Новинка</p>
-									<img class="promo__img" src="images/promo/pineapple.png" width="100" height="100" alt="Манго">
-								</div>
-								<div class="promo__inner-text">
-									<h3 class="promo__title">Манго, 1 шт</h3>
-									<p class="promo__instock">В наличии</p>
-									<div class="promo__inner-price">
-										<div class="promo__box-price">
-											<span class="promo__price">
-												660
-												<span class="promo__currency">₽</span>
-											</span>
-											<span class="promo__price-old">
-												960
-												<span class="promo__currency-old">₽</span>
+							</a>
+						</article>
+						<article class="promo__card mix category-a">
+							<a class="promo__link" href="#">
+								<div class="promo__inner">
+									<div class="promo__inner-img">
+										<p class="promo__note-new">Новинка</p>
+										<img class="promo__img" src="images/promo/mango.png" width="100" height="100" alt="Манго">
+									</div>
+									<div class="promo__inner-text">
+										<h3 class="promo__title">Манго, 1 шт</h3>
+										<p class="promo__instock">В наличии</p>
+										<div class="promo__inner-price">
+											<div class="promo__box-price">
+												<span class="promo__price-actual">
+													660
+													<span class="promo__currency-actual">₽</span>
+												</span>
+												<span class="promo__price-old">
+													960
+													<span class="promo__currency-old">₽</span>
+												</span>
+											</div>
+											<span class="promo__rating">
+												5.0
+												<span class="sr-only">
+													Рейтинг
+												</span>
 											</span>
 										</div>
-										<span class="promo__rating">
-											5.0
-											<span class="sr-only">
-												Рейтинг
-											</span>
-										</span>
 									</div>
 								</div>
-							</div>
-						</a>
-					</li>
-
-					<li class="promo__item mix category-a">
-						<a class="promo__link" href="#">
-							<div class="promo__inner">
-								<div class="promo__inner-img">
-									<p class="promo__note-new">Новинка</p>
-									<img class="promo__img" src="images/promo/pineapple.png" width="100" height="100" alt="Лосось">
-								</div>
-								<div class="promo__inner-text">
-									<h3 class="promo__title">Лосось, 1 кг</h3>
-									<p class="promo__instock">В наличии</p>
-									<div class="promo__inner-price">
-										<div class="promo__box-price">
-											<span class="promo__price">
-												999
-												<span class="promo__currency">₽</span>
-											</span>
-											<span class="promo__price-old">
-												1199
-												<span class="promo__currency-old">₽</span>
+							</a>
+						</article>
+						<article class="promo__card mix category-a">
+							<a class="promo__link" href="#">
+								<div class="promo__inner">
+									<div class="promo__inner-img">
+										<p class="promo__note-new">Новинка</p>
+										<img class="promo__img" src="images/promo/salmon.png" width="100" height="100" alt="Лосось">
+									</div>
+									<div class="promo__inner-text">
+										<h3 class="promo__title">Лосось, 1 кг</h3>
+										<p class="promo__instock">В наличии</p>
+										<div class="promo__inner-price">
+											<div class="promo__box-price">
+												<span class="promo__price-actual">
+													999
+													<span class="promo__currency-actual">₽</span>
+												</span>
+												<span class="promo__price-old">
+													1199
+													<span class="promo__currency-old">₽</span>
+												</span>
+											</div>
+											<span class="promo__rating">
+												4.5
+												<span class="sr-only">
+													Рейтинг
+												</span>
 											</span>
 										</div>
-										<span class="promo__rating">
-											4.5
-											<span class="sr-only">
-												Рейтинг
-											</span>
-										</span>
 									</div>
 								</div>
-							</div>
-						</a>
-					</li>
-
-					<li class="promo__item mix category-b">
-						<a class="promo__link" href="#">
-							<div class="promo__inner">
-								<div class="promo__inner-img">
-									<p class="promo__note-hit">Хит</p>
-									<img class="promo__img" src="images/promo/pineapple.png" width="100" height="100"
-										alt="Сок Granini овощной 100%">
-								</div>
-								<div class="promo__inner-text">
-									<h3 class="promo__title">Сок Granini овощной 100%, 0.5л</h3>
-									<p class="promo__ends">Заканчивается</p>
-									<div class="promo__inner-price">
-										<div class="promo__box-price">
-											<span class="promo__price">
-												180
-												<span class="promo__currency">₽</span>
-											</span>
-											<span class="promo__price-old">
-												230
-												<span class="promo__currency-old">₽</span>
+							</a>
+						</article>
+						<article class="promo__card mix category-b">
+							<a class="promo__link" href="#">
+								<div class="promo__inner">
+									<div class="promo__inner-img">
+										<p class="promo__note-hit">Хит</p>
+										<img class="promo__img" src="images/promo/juice-granini.png" width="100" height="100"
+											alt="Сок Granini овощной 100%">
+									</div>
+									<div class="promo__inner-text">
+										<h3 class="promo__title">Сок Granini овощной 100%, 0.5л</h3>
+										<p class="promo__ends">Заканчивается</p>
+										<div class="promo__inner-price">
+											<div class="promo__box-price">
+												<span class="promo__price-actual">
+													180
+													<span class="promo__currency-actual">₽</span>
+												</span>
+												<span class="promo__price-old">
+													230
+													<span class="promo__currency-old">₽</span>
+												</span>
+											</div>
+											<span class="promo__rating">
+												4.9
+												<span class="sr-only">
+													Рейтинг
+												</span>
 											</span>
 										</div>
-										<span class="promo__rating">
-											4.9
-											<span class="sr-only">
-												Рейтинг
-											</span>
-										</span>
 									</div>
 								</div>
-							</div>
-						</a>
-					</li>
-
-					<li class="promo__item mix category-b">
-						<a class="promo__link" href="#">
-							<div class="promo__inner">
-								<div class="promo__inner-img">
-									<p class="promo__note-hit">Хит</p>
-									<img class="promo__img" src="images/promo/pineapple.png" width="100" height="100"
-										alt="Фруктовая корзина">
-								</div>
-								<div class="promo__inner-text">
-									<h3 class="promo__title">Фруктовая корзина, 1 шт</h3>
-									<p class="promo__instock">В наличии</p>
-									<div class="promo__inner-price">
-										<div class="promo__box-price">
-											<span class="promo__price">
-												3990
-												<span class="promo__currency">₽</span>
-											</span>
-											<span class="promo__price-old">
-												5990
-												<span class="promo__currency-old">₽</span>
+							</a>
+						</article>
+						<article class="promo__card mix category-b">
+							<a class="promo__link" href="#">
+								<div class="promo__inner">
+									<div class="promo__inner-img">
+										<p class="promo__note-hit">Хит</p>
+										<img class="promo__img" src="images/promo/fruit-basket.png" width="100" height="100"
+											alt="Фруктовая корзина">
+									</div>
+									<div class="promo__inner-text">
+										<h3 class="promo__title">Фруктовая корзина, 1 шт</h3>
+										<p class="promo__instock">В наличии</p>
+										<div class="promo__inner-price">
+											<div class="promo__box-price">
+												<span class="promo__price-actual">
+													3990
+													<span class="promo__currency-actual">₽</span>
+												</span>
+												<span class="promo__price-old">
+													5990
+													<span class="promo__currency-old">₽</span>
+												</span>
+											</div>
+											<span class="promo__rating">
+												4.8
+												<span class="sr-only">
+													Рейтинг
+												</span>
 											</span>
 										</div>
-										<span class="promo__rating">
-											4.8
-											<span class="sr-only">
-												Рейтинг
-											</span>
-										</span>
 									</div>
 								</div>
-							</div>
-						</a>
-					</li>
-
-					<li class="promo__item mix category-b">
-						<a class="promo__link" href="#">
-							<div class="promo__inner">
-								<div class="promo__inner-img">
-									<p class="promo__note-hit">Хит</p>
-									<img class="promo__img" src="images/promo/pineapple.png" width="100" height="100"
-										alt="Свинина мякоть">
-								</div>
-								<div class="promo__inner-text">
-									<h3 class="promo__title">Свинина мякоть, 1 кг</h3>
-									<p class="promo__instock">В наличии</p>
-									<div class="promo__inner-price">
-										<div class="promo__box-price">
-											<span class="promo__price">
-												499
-												<span class="promo__currency">₽</span>
-											</span>
-											<span class="promo__price-old">
-												599
-												<span class="promo__currency-old">₽</span>
+							</a>
+						</article>
+						<article class="promo__card mix category-b">
+							<a class="promo__link" href="#">
+								<div class="promo__inner">
+									<div class="promo__inner-img">
+										<p class="promo__note-hit">Хит</p>
+										<img class="promo__img" src="images/promo/pork.png" width="100" height="100" alt="Свинина мякоть">
+									</div>
+									<div class="promo__inner-text">
+										<h3 class="promo__title">Свинина мякоть, 1 кг</h3>
+										<p class="promo__instock">В наличии</p>
+										<div class="promo__inner-price">
+											<div class="promo__box-price">
+												<span class="promo__price-actual">
+													499
+													<span class="promo__currency-actual">₽</span>
+												</span>
+												<span class="promo__price-old">
+													599
+													<span class="promo__currency-old">₽</span>
+												</span>
+											</div>
+											<span class="promo__rating">
+												4.6
+												<span class="sr-only">
+													Рейтинг
+												</span>
 											</span>
 										</div>
-										<span class="promo__rating">
-											4.6
-											<span class="sr-only">
-												Рейтинг
-											</span>
-										</span>
 									</div>
 								</div>
-							</div>
-						</a>
-					</li>
-
-				</ul>
+							</a>
+						</article>
+					</div>
+				</div>
 
 				<button class="btn promo__btn" type="button">
 					Показать еще
 				</button>
 
 			</div>
-		</section> -->
+		</section>
 
-		<!-- <div class="partners"></div> -->
+		<div class="brands">
+			<div class="container">
 
-		<!-- <div class="news"></div> -->
+				<ul class="brands__items">
+					<li class="brands__item">
+						<a class="brands__link" href="#">
+							<img class="brands__img" src="images/brands/sprite.svg" alt="Бренд Sprite">
+						</a>
+					</li>
+					<li class="brands__item">
+						<a class="brands__link" href="#">
+							<img class="brands__img" src="images/brands/dr-pepper.svg" alt="Бренд Dr Pepper">
+						</a>
+					</li>
+					<li class="brands__item">
+						<a class="brands__link" href="#">
+							<img class="brands__img" src="images/brands/coca-cola.svg" alt="Бренд Coca Cola">
+						</a>
+					</li>
+					<li class="brands__item">
+						<a class="brands__link" href="#">
+							<img class="brands__img" src="images/brands/pepsi.svg" alt="Бренд Pepsi">
+						</a>
+					</li>
+					<li class="brands__item">
+						<a class="brands__link" href="#">
+							<img class="brands__img" src="images/brands/red-bull.svg" alt="Бренд Red Bull">
+						</a>
+					</li>
+					<li class="brands__item">
+						<a class="brands__link" href="#">
+							<img class="brands__img" src="images/brands/fanta.svg" alt="Бренд Fanta">
+						</a>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+
+		<section class="news">
+			<div class="container">
+
+				<div class="news__header">
+					<h2 class="title news__title">
+						Наши новости
+					</h2>
+					<a class="news__title-link" href="#">
+						Все новости
+					</a>
+				</div>
+
+				<ul class="news__items">
+					<li class="news__item">
+						<a class="news__link" href="#">
+							<div class="news__data" style="background-image: url('images/news/strawberry.jpg')">
+								<div class="news__month">
+									Июль
+									<span class="news__day">
+										15
+									</span>
+								</div>
+							</div>
+							<h3 class="news__text">
+								Событие этого лета: распродажа сезонных фруктов в онлайн-маркете ФрешОК. Торопись, пока всё не
+								разобрали!
+							</h3>
+						</a>
+					</li>
+					<li class="news__item">
+						<a class="news__link" href="#">
+							<div class="news__data" style="background-image: url('images/news/mango.jpg')">
+								<div class="news__month">
+									Май
+									<span class="news__day">
+										07
+									</span>
+								</div>
+							</div>
+							<h3 class="news__text">
+								Шикарнейший выбор манго в нашем онлайн-маркете
+							</h3>
+						</a>
+					</li>
+					<li class="news__item">
+						<a class="news__link" href="#">
+							<div class="news__data" style="background-image: url('images/news/papaya.jpg')">
+								<div class="news__month">
+									Февраль
+									<span class="news__day">
+										20
+									</span>
+								</div>
+							</div>
+							<h3 class="news__text">
+								Всё, что вы хотели знать о папайя
+							</h3>
+						</a>
+					</li>
+				</ul>
+
+			</div>
+		</section>
 
 	</main>
 

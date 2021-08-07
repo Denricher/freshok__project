@@ -1,7 +1,6 @@
 .promo {
 	background-color: $silver-100;
-	padding: 70px 0;
-	// проверить
+	padding: 80px 0 70px;
 
 	&__filters {
 		letter-spacing: 0.1em;
@@ -24,7 +23,7 @@
 		margin-bottom: 20px;
 	}
 
-	&__item {
+	&__card {
 		position: relative;
 		max-width: 300px;
 		width: 100%;
@@ -86,7 +85,16 @@
 	}
 
 	&__title {
-		margin-bottom: 5px;
+		@extend %lato-600;
+		font-size: 14px;
+		line-height: 1.4;
+		letter-spacing: 0.03em;
+		color: $dark-900;
+		min-height: 4em;
+		// для фиксации высоты текстового блока на несколько строк
+		margin-bottom: 9px;
+
+		// ограничение текста более одной строки????
 	}
 
 	&__instock,
@@ -118,14 +126,14 @@
 		align-items: flex-end;
 	}
 
-	&__price {
+	&__price-actual {
 		@extend %lato-400;
 		font-size: 20px;
 		line-height: 1;
 		margin-right: 10px;
 	}
 
-	&__currency {
+	&__currency-actual {
 		@extend %lato-600;
 		font-size: 14px;
 		margin-left: -6px;
