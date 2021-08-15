@@ -1,0 +1,70 @@
+.header {
+	background-color: $dark-800;
+
+	&__nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 14px 0;
+	}
+
+	&__list {
+		display: flex;
+	}
+
+	&__item {
+		position: relative;
+		cursor: pointer;
+
+		&:not(:last-child) {
+			margin-right: 25px;
+		}
+
+		&:hover {
+			opacity: 0.7;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
+			width: 32px;
+			height: 22px;
+			left: 0;
+			top: 0;
+		}
+	}
+
+	.header &__item--address {
+		// Почему нельзя & &__item--address?
+		padding-left: 45px;
+		margin-right: 45px;
+
+		&::before {
+			background-image: url('../images/icons/address.svg');
+		}
+	}
+
+	&__item--tel {
+		padding-left: 35px;
+
+		&::before {
+			background-image: url('../images/icons/tel.svg');
+		}
+	}
+
+	&__link {
+		font-weight: 700;
+		font-size: 13px;
+		line-height: 1.7;
+		color: $white;
+		text-transform: uppercase;
+		outline-color: $green-900;
+	}
+
+	&__bar {
+		background-color: $green-900;
+	}
+}

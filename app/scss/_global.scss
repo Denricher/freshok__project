@@ -6,7 +6,8 @@ body {
 body {
 	display: flex;
 	flex-direction: column;
-	@extend %lato-600;
+	font-family: 'Lato', sans-serif;
+	font-weight: 600;
 	font-size: 14px;
 	line-height: 1.4;
 	letter-spacing: 0.03em;
@@ -29,6 +30,13 @@ body {
 	clip-path: inset(100%);
 	clip: rect(0 0 0 0);
 	overflow: hidden;
+}
+
+// Для однострочного текста
+.nodamage {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .container {
@@ -58,19 +66,27 @@ body {
 	cursor: pointer;
 }
 
-.filter-line {
+.filter {
 	display: flex;
 	justify-content: center;
-	@extend %lato-700;
+	font-weight: 700;
 	font-size: 15px;
 	color: $dark-500;
 	text-transform: uppercase;
 	margin-bottom: 48px;
-}
 
-.filter-item {
-	width: fit-content;
-	border-bottom: 3px solid transparent;
-	cursor: pointer;
-	transition: border-color 0.3s ease-in;
+	&__item {
+		border-bottom: 3px solid transparent;
+		cursor: pointer;
+		transition: border-color 0.3s ease-in;
+	}
+
+	&__item:not(:last-child) {
+		margin-right: 25px;
+	}
+
+	&__item:hover,
+	&__item.mixitup-control-active {
+		border-color: $green-200;
+	}
 }

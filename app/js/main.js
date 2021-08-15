@@ -9,7 +9,7 @@ $(function () {
 	$('.brands__runner').slick({
 		arrows: false,
 		infinite: true,
-		slidesToShow: 5,
+		slidesToShow: 6,
 		slidesToScroll: 1,
 	});
 
